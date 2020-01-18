@@ -1,0 +1,35 @@
+.chat-main
+  .main-header
+    .main-header__left
+      .main-header__left__group-name
+        グループ1
+      .main-header__left__members
+        Member:
+        スペンサー
+    .main-header__edit
+      = link_to "#", class: "edit-btn" do
+        Edit
+  .messages
+    .message
+      .message__upper
+        .message__upper__user-name
+          スペンサー
+        .message__upper__date
+          2020/1/18(Sat) 19:20:41
+      .message__content
+        3回目
+    .message
+      .message__upper
+        .message__upper__user-name
+          スペンサー
+        .message__upper__date
+          2020/1/18(Sat) 19:20:41
+      .message__content
+        3回目にもなるとさすがに分かる
+  .form
+    .form__input
+      %input.form__input__box{placeholder: "type a message", type: "text"}
+      %label.form__input__image
+        = icon('fas', 'image')
+        %input.form__input__image-btn{type: "file"}
+    %input.form__submit{type: "submit", value: "Send"}
