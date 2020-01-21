@@ -36,6 +36,10 @@
     height: calc(100vh - 100px);
     padding: 10px 20px 0;
     font-weight: bold;
+    a {
+      text-decoration: none;
+      color: $white;
+    }
     .group{
       padding: 20px 0 40px;
       color: $white;
