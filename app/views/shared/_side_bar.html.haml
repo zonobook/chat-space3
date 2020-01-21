@@ -4,23 +4,16 @@
       .side-header__box__user-name
         = current_user.name
       .side-header__box__icons
-        = link_to "#", class: "icon" do
+        = link_to new_group_path, class: "icon" do
           = icon('fas', 'edit')
         = link_to edit_user_path(current_user), class: "icon" do
           = icon('fas', 'user-cog')
+
   .groups
-    .group
-      .group__name
-        グループ名
-      .group__new-message
-        まだメッセージがありません
-    .group
-      .group__name
-        グループ名2
-      .group__new-message
-        まだメッセージがありません
-    .group
-      .group__name
-        グループ名3
-      .group__new-message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__new-message
+            メッセージはまだありません。
