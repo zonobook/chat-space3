@@ -1,0 +1,10 @@
+.chat-main
+  .main-header
+  .messages
+  .form
+    .form__input
+      %input.form__input__box{placeholder: "type a message", type: "text"}
+      %label.form__input__image
+        = icon('fas', 'image')
+        %input.form__input__image-btn{type: "file"}
+    %input.form__submit{type: "submit", value: "Send"}
