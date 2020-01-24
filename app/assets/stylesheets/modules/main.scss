@@ -48,14 +48,15 @@
         &__user-name{
           color: $black;
           font-size: 16px;
-          padding-right: 5px;
+          padding-right: 10px;
         }
         &__date{
+          padding-top: 3px;
           color: $gray;
           font-size: 12px;
         }
       }
-      &__content{
+      &__lower-message{
         color: #434A54;
         font-size: 14px;
       }

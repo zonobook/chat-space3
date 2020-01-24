@@ -12,14 +12,6 @@
         
   .messages
     = render @messages
-    .message
-      .message__upper
-        .message__upper__user-name
-          スペンサー
-        .message__upper__date
-          2020/1/18(Sat) 19:20:41
-      .message__content
-        3回目
 
   = form_for [@group, @message] do |f|
     .form
