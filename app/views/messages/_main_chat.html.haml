@@ -9,7 +9,9 @@
     .main-header__edit
       = link_to "#", class: "edit-btn" do
         Edit
+        
   .messages
+    = render @messages
     .message
       .message__upper
         .message__upper__user-name
@@ -18,18 +20,12 @@
           2020/1/18(Sat) 19:20:41
       .message__content
         3回目
-    .message
-      .message__upper
-        .message__upper__user-name
-          スペンサー
-        .message__upper__date
-          2020/1/18(Sat) 19:20:41
-      .message__content
-        3回目にもなるとさすがに分かる
-  .form
-    .form__input
-      %input.form__input__box{placeholder: "type a message", type: "text"}
-      %label.form__input__image
-        = icon('fas', 'image')
-        %input.form__input__image-btn{type: "file"}
-    %input.form__submit{type: "submit", value: "Send"}
+
+  = form_for [@group, @message] do |f|
+    .form
+      .form__input
+        = f.text_field :content, class: 'form__input__box', placeholder: 'type a message'        
+        = f.label :image, class: 'form__input__image' do
+          = icon('fas', 'image')
+          = f.file_field :image, class: 'form__input__image-btn'
+      = f.submit 'Send', class: 'form__submit'
